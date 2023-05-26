@@ -4,21 +4,24 @@
   <title>웹페이지 홈 화면</title>
   <link rel="stylesheet" href="oo.css">
   <style>
- body {
+
+    body {
       height: 100%;
-      margin: 5;
-      padding:0;
+      margin: 0;
+      padding: 0;
     }
     .container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
       gap: 10px;
-      height: 100%;
+      margin: 0 auto;
+      max-width: 700px;
+      height: auto;
     }
     .image {
       width: 100%;
       height: 100%;
+      margin: 0;
     }
     .image img {
       width: 100%;
@@ -26,39 +29,54 @@
       object-fit: cover;
     }
     .title {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      padding: 20%;
+      text-align: center;
+      padding: 20px;
     }
+  
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    
+    
   </style>
 </head>
 <body>
+  <main>
+    <p style="text-align: center;"><h2></h2></p>
+  </main>
+  <div style="text-align: center;">
+    <h2>Memory</h2>
+    <h1>Welcome to My Website</h1>
     <p><h2>Memory</h2></p>
+  </div>
   <div class="container">
     <div class="image">
-    <img src="1.jpeg"width="450" height="600"alt="이미지 1"></a>
+      <img src="1.jpeg" alt="이미지 1">
     </div>
     <div class="image">
-    <img src="2.jpeg"width="450" height="600"alt="이미지 2">
+      <img src="2.jpeg" alt="이미지 2">
     </div>
     <div class="image">
-      <img src="3.jpeg"width="450" height="600" alt="이미지 3">
+      <img src="3.jpeg" alt="이미지 3">
     </div>
     <div class="image">
-      <img src="4.jpeg" width="450" height="600"alt="이미지 4">
+      <img src="4.jpeg" alt="이미지 4">
     </div>
   </div>
-</body>
-<nav class="navber" style="position: fixed; top: 0; left: 0; right: 0;">
-    <div class="navber__logo">
+
+  <nav class="navbar" style="position: fixed; top: 0; left: 0; right: 0;">
+    <div class="navbar__logo">
       <i class="fab fa-accusoft"></i>
       <a href="Art Book"></a>
     </div>
-  
-    <ul class="navber__menu">
+
+    <ul class="navbar__menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="aa.html">Gallery</a></li>
       <li><a href="ww.html">New Art</a></li>
@@ -69,36 +87,129 @@
       <button type="button" class="navyBtn" onClick="location.href='sad.html'"></button>
     </div>
   </nav>
+
+  <div class="title">
+    <h1>"Art__Dook"</h1>
+    <h2>Memory</h2>
+    <h2>Camera
+       <h2>Dig UP</h2>
+    <h2>Frog Boy</h2>
+  </div>
+  <div class="container">
+    <div class="image">
+        <img src="6.jpeg" width="350" height="500" alt="이미지 1">
+    </div>
+    <div class="image">
+      <img src="10.jpeg" width="350" height="500" alt="이미지 2">
+    </div>
+    <div class="image">
+      <img src="8.jpeg" width="350" height="500" alt="이미지 3">
+    </div>
+    <div class="image">
+      <img src="9.jpeg" width="350" height="500" alt="이미지 4">
+    </div>
+  </div>
+</body>
+
+
+<script>
+  // Display the images one by one with a delay
+  const images = document.querySelectorAll('.image');
+  let currentIndex = 0;
+  
+  setInterval(() => {
+    images[currentIndex].style.animation = 'none';
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.animation = 'fade-in 2s ease-in-out forwards';
+  }, 3000);
+  
+</script>
+
+<nav class="navbar" style="position: fixed; top: 0; left: 0; right: 0;">
+  <div class="navbar__logo">
+    <i class="fab fa-accusoft"></i>
+    <a href="Art Book"></a>
+  </div>
+
+  <ul class="navbar__menu">
+    <li><a href="3index.html">Home</a></li>
+    <li><a href="aa.html">Gallery</a></li>
+    <li><a href="ww.html">New Art</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="22.html">Bookings</a></li>
+  </ul>
+ 
+</nav>
 <body>
   <div class="title">
-    <h1>"Art__Dook" </h1>
+    <h1>"Art__Dook"</h1>
     <h2>Memory</h2>
     <h2>Camera</h2>
     <h2>Dig UP</h2>
     <h2>Frog Boy</h2>
   </div>
- <body>
-    <button class="button">going to see </button>
-<button class="button" onclick="location.href='https://example.com';">going to see</button>
-    <nav>class="navber">
-    <div class="navber__logo">
-      <i class="fab fa-accusoft"></i>
-      <a href="Art Book"></a>
-    </div>
 
-    <ul class="navber__menu">
-        <li><a href="3index.html">Home</a></li>
-        <li><a href="aa.html">Gallery</a></li>
-        <li><a href="ww.html">New Art</a></li>
-        <li><a href="Q&A.html">Q&A<Q&/a></li>
-        <li><a href="22.html">Bookings</a></li>
-    </ul>
-   <div style=" text-align: center;">
-      
-       <button type="button" class="navyBtn" onClick="location.href='sad.html'">
-           
-           
-         
-   </div>
+  <button class="button">going to see</button>
+  <button class="button" onclick="location.href='https://example.com';">going to see</button>
+
+  <div class="navbar__logo">
+    <i class="fab fa-accusoft"></i>
+    <a href="Art Book"></a>
+  </div>
+
+  <ul class="navbar__menu">
+    <li><a href="3index.html">Home</a></li>
+    <li><a href="aa.html">Gallery</a></li>
+    <li><a href="ww.html">New Art</a></li>
+    <li><a href="Q&A.html">Q&A</a></li>
+    <li><a href="22.html">Bookings</a></li>
+  </ul>
+ 
+  <script>
+
+<style>
+    
+  .image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+  }
+
+  <style>
+  .image {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+</style>
+
+<script>
+  // Display the images one by one with a fade-in effect
+  const images = document.querySelectorAll('.image');
+  let currentIndex = 0;
+  let opacity = 0;
+
+  function fade() {
+    setInterval(() => {
+      images[currentIndex].style.opacity = opacity;
+      opacity += 0.05;
+
+      if (opacity >= 1) {
+        currentIndex = (currentIndex + 1) % images.length;
+        opacity = 0;
+      }
+    }, 500);
+
+    setInterval((1.jpeg) => {
+      images[currentIndex].style.opacity = 1;
+    }, 500);
+  }
+
+  fade();
+</script>
 </body>
 </html>

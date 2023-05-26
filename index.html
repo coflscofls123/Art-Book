@@ -1,32 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  
+  <style>
+    @keyframes snowfall {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      background-color: #ffffff;
+      border-radius: 50%;
+      animation: snowfall 10s linear infinite; /* Increased duration to 10s */
+    }
+  </style>
+  
+</head>
+<body>
+  <!-- Place this div before the closing </body> tag -->
+  <div class="snowfall-container"></div>
+
+  <script>
+    // Generate random snowflakes
+    function generateSnowflakes() {
+      const container = document.querySelector('.snowfall-container');
+
+      for (let i = 0; i < 50; i++) {
+        const snowflake = document.createElement('div');
+        snowflake.classList.add('snowflake');
+        snowflake.style.left = `${Math.random() * 100}%`;
+        snowflake.style.animationDuration = `${Math.random() * 6 + 5}s`; /* Increased duration range to 5-10s */
+        container.appendChild(snowflake);
+      }
+    }
+
+    // Call the function to generate snowflakes
+    generateSnowflakes();
+  </script>
+</body>
+</html>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="oo.css">
+    <link rel="stylesheet" href=".css">
     <title>Docu ent</title>
-    <src=" 
-</head>
-<html>
-<head>
 
-<style>
-    
-/* 버튼의 위치 설정 */
+    <title>Welcome to My Website</title>
+    <style>
+        
+        body {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            text-align: center;
+            font-size: 24px;
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            background-color: black;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        #navbar ul {
+            margin: 50;
+            padding: 50;
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar ul li {
+            margin: 0 10px;
+        }
+
+        #navbar ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #logo {
+            display: none;
+            animation: fade-in 2s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+  
 .button {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  margin-bottom: 100px;
-  margin-right: 100px;
-  width: 100px;
-  height: 50px;
-}
-.button {
-  position: fixed; /* 버튼을 고정시킴 */
-  bottom: 20px; /* 화면 하단으로 10px 위치에 배치 */
-  right: 20px; /* 화면 오른쪽으로 10px 위치에 배치 */
+  bottom: 40px; /* 화면 하단으로 10px 위치에 배치 */
+  right: 40px; /* 화면 오른쪽으로 10px 위치에 배치 */
   padding: 10px 20px;
   background-color: #000000; /* 검정색 배경색 */
   color: #ffffff; /* 흰색 글자색 */
@@ -44,52 +131,36 @@
   background-color: #111111; /* 버튼을 클릭할 때의 배경색 */
 }
 </style>
+    </style>
 </head>
 <body>
-
-<!-- 버튼 요소 -->
-<button class="button">going to see </button>
-<button class="button" onclick="location.href='https://example.com';">going to see</button>
+    <nav class="navber" style="position: fixed; top: 0; left: 0; right: 0;">
+        <!-- 내비게이션 바 내용 생략 -->
+        </nav>
+    <div id="navbar">
+      
+    </div>
+    <div class="butterfly"></div>
+    <div style="text-align: center;color: black;" h3>Memory!</h3>
+    <div style="text-align: center;color: black;" h3>Memory!</h3>
+    <div style="text-align: center;color: white;" h3></h3>
+      <a href="cc.html"><button class="button">></button></a>
 </body>
-</html>
-<body>
-    <nav class="navber">
-         <div class="navber__logo">
-           <i class="fab fa-accusoft"></i>
-           <a href="Art Book"></a>
-         </div>
-
-        <ul class="navber__menu">
-            <li><a href="3index.html">Home</a></li>
-            <li><a href="aa.html">Gallery</a></li>
-            <li><a href="ww.html">New Art</a></li>
-            <li><a href="Q&A.html">Q&A</a></li>
-            <li><a href="22.html">Bookings</a></li>
-        </ul>
-        <div style=" text-align: center;">
-           
-            <button type="button" class="navyBtn" onClick="location.href='aa.html'">
-                
-                
-              
+<p><h2>Art Memory </h2></p>
+    <div id="logo">
+        <img src="1.png" width="600" height="660"alt="이미지 2"> 
+        <div class="logo">
         </div>
 
-​
-        <style>
-            body{
-                height: 100vh;
-                width:100%;
-                background-image :url("1111co.jpg");
-                background-size:cover;
-                background-repeat:no-repeat;
-    } 
-     <p>style="margin-right:100px"</p>
-     
-    
-        </style>
+    <script>
+        window.onload = function() {
+            document.getElementById('logo').style.display = 'block';
+        };
 
-        <div class="navber__links">    
-        <div class="navbar__links"></div>
-    </nav>
+        // 웹용 네비게이션 바 표시
+        if (window.innerWidth >= 768) {
+            document.getElementById('navbar').style.display = 'block';
+        }
+    </script>
 </body>
 </html>

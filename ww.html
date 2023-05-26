@@ -1,7 +1,25 @@
 <!DOCTYPE html>
-<html>
+
+
+<html lang="en">
 <head>
-  <title>비디오 예제</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div class="butterfly"></div>
+ 
+
+  
+  </style>
+  <title>Document</title>
+</head>
+<body>
+  <div class="back">
+    <a target="_blank" href="#">
+        <img class="moon" src="ooo.gif" style="max-width:100%; height:100% auto;"alt="달덩이">
+    </a>
+    </div>
+  
   <style>
     /* 화면 검정색 배경 설정 */
     body {
@@ -10,19 +28,9 @@
       padding: 0;
     }
 
-    /* 비디오를 가운데 정렬 */
-    .video-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+    
 
-    /* 비디오의 최대 너비와 높이 설정 */
-    video {
-      max-width: 100%;
-      max-height: 100%;
-    }
+    
 
     /* 제목 스타일 설정 */
     .video-title {
@@ -31,16 +39,66 @@
       color: white; /* 제목의 글자색을 흰색으로 설정 */
       margin-top: 50px; /* 제목 위쪽에 10px 마진 추가 */
     }
+
+  
+  .button {
+    bottom: 40px; /* 화면 하단으로 10px 위치에 배치 */
+    right: 40px; /* 화면 오른쪽으로 10px 위치에 배치 */
+    padding: 10px 20px;
+    background-color: #000000; /* 검정색 배경색 */
+    color: #ffffff; /* 흰색 글자색 */
+    border-radius: 10px; /* 10px 모서리 */
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out; /* 배경색 변화에 애니메이션 효과 추가 */
+  }
+  
+  .button:hover {
+    background-color: #333333; /* 버튼에 호버(hover) 효과가 적용될 때의 배경색 */
+  }
+  
+  .button:active {
+    background-color: #111111; /* 버튼을 클릭할 때의 배경색 */
+  }
+  
   </style>
 </head>
 <body>
-    <button type="button" onclick="location.href='index.html'">Home </button>    
-    <lick="history.back(); return false;" style="color:white;">Back</a>
+  
+    <a href="3index.html"><button class="button">Home</button></a> 
+    <a href="aa.html"><button class="button">Back</button></a>
+    <a href="22.html"><button class="button">></button></a>
+
     <div class="container">
-            <button class="search-btn">Go</buttgn>
   <div class="video-container">
-    <video src="33.mp4" controls></video>
+   
   </div>
-  <h1 class="video-title">기억조각 </h1>
-</body>
+  <div style="text-align: center;">
+    <button type="button" class="button" onclick="location.href='aa.html'">
+        <h1 class="video-title">dwdwjdwjd</h1>
+        <img src="44.jpeg" width="350" height="300">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+      <p class="text_column">Lorem ipsum dolor sit amet, consectetur 
+    </button>
+    <button type="button" class="button" onclick="location.href='aa.html'">
+        <h1 class="video-title">dwdwjdwjd</h1>
+        <img src="88.jpeg" width="350" height="300">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+      <p class="text_column">Lorem ipsum dolor sit amet, consectetur 
+    </button>
+    <button type="button" class="button" onclick="location.href='aa.html'">
+        <h1 class="video-title">dwdwjdwjd</h1>
+        <img src="99.jpeg" width="350" height="300">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+      <p class="text_column">Lorem ipsum dolor sit amet, consectetur 
+    </button>
+
 </html>
+<script>
+  // Display the images one by one with a delay
+  const images = document.querySelectorAll('.image');
+  let delay = 0;
+  images.forEach((image) => {
+    image.style.animationDelay = `${delay}s`;
+    delay += 0.5;
+  });

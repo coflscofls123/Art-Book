@@ -94,16 +94,40 @@
         }
 
         .image {
-            max-width: 100px;
-            max-height: 100px;
+            max-width: 50px;
+            max-height: 50px;
             border-radius: 50%;
             margin-top: 20px;
             
         }
+
+        
     </style>
+
+<style>
+    .back-btn {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 20px;
+        font-size: 1.2rem;
+    }
+</style>
+
+
+<script>
+    function goToPage() {
+        window.location.href = "다음 페이지 URL";
+    }
+</script>
 </head>
 
 <body>
+    <button type="button" onclick="location.href='1index.html'">Home </button>    
+    <a href="1index.html" onclick="history.back(); return false;" style="color:white;">Back</a>
     <div class="container">
         <div class="search-container">
             <input type="text" class="search-box" placeholder="What is help??">
@@ -130,3 +154,4 @@
             </div>
 
         <!-- 추가적인 Q&A 항목들을 원하는 만큼 추가
+            ㅍ
