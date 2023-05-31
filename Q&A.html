@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 화면 검정색 배경 설정 */
+    body {
+      background-color: black;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* 제목 스타일 설정 */
+    .video-title {
+      text-align: center;
+      margin-top: 50px;
+      color: white; /* 제목의 글자색을 흰색으로 설정 */
+      margin-top: 50px; /* 제목 위쪽에 10px 마진 추가 */
+    }
+    
+    .button {
+      bottom: 40px; /* 화면 하단으로 10px 위치에 배치 */
+      right: 40px; /* 화면 오른쪽으로 10px 위치에 배치 */
+      padding: 10px 20px;
+      background-color: #000000; /* 검정색 배경색 */
+      color: #ffffff; /* 흰색 글자색 */
+      border-radius: 10px; /* 10px 모서리 */
+      text-align: center;
+      text-decoration: none;
+      transition: background-color 0.3s ease-in-out; /* 배경색 변화에 애니메이션 효과 추가 */
+    }
+    
+    .button:hover {
+      background-color: #333333; /* 버튼에 호버(hover) 효과가 적용될 때의 배경색 */
+    }
+    
+    .button:active {
+      background-color: #111111; /* 버튼을 클릭할 때의 배경색 */
+    }
+    
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    
+    .video-container {
+      width: 350px;
+      height: 500px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: slideIn 1s ease-in-out;
+    }
+    
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+  <title>Document</title>
+</head>
+<body>
+</div>
+<div class="back">
+    <a target="_blank" href="m.html">
+        <img class="moon" src="rrrr.gif" style="max-width:100%; height:100% auto;"alt="달덩이">
+        
+    </a>            
+</body>
+
+  <a href="3index.html"><button class="button">Home</button></a> 
+  <a href="aa.html"><button class="button">Back</button></a>
+  <a href="22.html"><button class="button">></button></a>
+  <div class="title">
+  
+  <div class="container">
+    <div class="video-container">
+      <button type="button" class="button" onclick="location.href=''>
+        <h1 class="title">Minseo</h1>
+        <img class="image" src="mm.jpeg" width="350" height="500">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+        <p class="text_column">Lorem ipsum dolor sit amet, consectetur</p>
+      </button>
+    </div>
+    <div class="video-container">
+      
+      <button type="button" class="button" onclick="location.href='m.ht'>
+        <h1 class="title">HaEun</h1>
+        <img class="image" src="mmm.jpeg" width="350" height="500">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+        <p class="text_column">Lorem ipsum dolor sit amet, consectetur</p>
+      </button>
+    </div>
+    <div class="video-container">
+      <button type="button" class="button" onclick="location.href=''>
+        <h1 class="title">SoHee</h1>
+        <img class="image" src="mmmm.jpeg" width="350" height="500">
+        <p class="tag">HTML, CSS, JS, WordPress</p>
+        <p class="text_column">Lorem ipsum dolor sit amet, consectetur</p>
+      </button>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
+
+<script>
+  // Display the images one by one with a delay
+  const images = document.querySelectorAll('.image');
+  let delay = 0;
+  images.forEach((image) => {
+    image.style.animationDelay = `${delay}s`;
+    delay += 0.5;
+  });
+</script>
