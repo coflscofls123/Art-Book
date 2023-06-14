@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>웹페이지 홈 화면</title>
+  <link rel="stylesheet" href="oo.css">
+  <style>
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .image {
+      width: 350px;
+      height: 500px;
+      margin: 10px;
+    }
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .title {
+      text-align: center;
+      padding: 20px;
+    }
+    @media screen and (max-width: 500px){.back{width: 500px;
+    height: auto;}
+        
+    }
+  </style>
+</head>
+<body>
+    
+  <main>
+    <p style="text-align: center;"><h2></h2></p>
+  </main>
+  
+  
+  <div class="back">
+    <a target="_blank" href="aa.html">
+        <img class="moon" src="rrr.jpeg" style="max-width:100%; height:100% auto;"alt="달덩이">
+    </a>
+    </div>
+    <div class="back">
+        <a target="_blank" href="#">
+            <img class="moon" src="ttt.gif" style="max-width:100%; height:auto;"alt="달덩이">
+        </a>
+        </div>
+        <div class="back">
+          <a target="_blank" href="#">
+              <img class="moon" src="uuuu.gif" style="max-width:100%; height:auto;"alt="달덩이">
+          </a>
+          
+          </div>
+          <div class="back">
+            <a target="_blank" href="#">
+                <img class="moon" src="ii.gif" style="max-width:100%; height:auto;"alt="달덩이">
+            </a>
+            
+            </div>
+  </div>
+  <div style="display: flex; justify-content: center;">
+    
+  </div>
+  <div class="container">
+    <div class="image">
+      <img src="2.jpeg" alt="이미지 1">
+    </div>
+    <div class="image">
+      <img src="1.jpeg" alt="이미지 2">
+    </div>
+    <div class="image">
+      <img src="3.jpeg" alt="이미지 3">
+    </div>
+    <div class="image">
+      <img src="4.jpeg" alt="이미지 4">
+    </div>
+  </div>
+
+  <nav class="navbar" style="position: fixed; top: 0; left: 0; right: 0;">
+    <div class="navbar__logo">
+      <i class="fab fa-accusoft"></i>
+      <a href="Art Book"></a>
+    </div>
+
+    <ul class="navbar__menu">
+      <li><a href="3index.html">Home</a></li>
+      <li><a href="aa.html">Gallery</a></li>
+      <li><a href="ww.html">NewArt</a></li>
+      <li><a href="www.html">Therapy</a></li>
+      <li><a href="22.html">Book</a></li>
+    </ul>
+    <div style="text-align: center;">
+     
+    </div>
+  </nav>
+
+  <body>
+    <div class="title">
+      <h1>Art Book</h1>
+    
+    </div>
+  </body>
+
+  <script>
+    
+    // Display the images one by one with a delay
+    const images = document.querySelectorAll('.image');
+    let delay = 0;
+    images.forEach((image) => {
+      image.style.animationDelay = `${delay}s`;
+      </script>
+     <style>
+        /* 배경 이미지 설정 */
+        body {
+            background-image: url(".jpeg");
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 슬라이드 쇼 스타일링 */
+        .slide {
+            display: none;
+            text-align: center;
+        }
+
+        .slide img {
+            width: 350px;
+            height: 300px;
+        }
+
+        .video-title {
+            color: white;
+        }
+
+        /* 네비게이션 바 스타일링 */
+        .navbar {
+            background-color: #971616;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 20px;
+        }
+
+        .navbar__logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar__logo i {
+            margin-right: 5px;
+        }
+
+        .navbar__menu {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navbar__menu li {
+            margin-left: 10px;
+        }
+
+        .navbar__menu li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* 버튼 스타일링 */
+        
+        .button {
+            background-color: #5d3f3f;
+            color: white;
+            border: none;
+            border: 4px solid white;
+            padding: 10px 20px;
+            font-size: 16px;
+            
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #A52A2A
+        }
+    </style>
+    <script>
+        // 로고와 네비게이션 바 초기 설정
+        window.onload = function() {
+            document.getElementById('logo').style.display = 'block';
+            if (window.innerWidth >= 768) {
+                document.getElementById('navbar').style.display = 'block';
+            }
+        };
+
+        // 이미지 슬라이드 쇼
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000);
+        }
+    </script>
+    <title>Document</title>
+</head>
+
+
+
+
+<!-- 이미지 슬라이드 -->
+<div class="slideshow-container">
+    <div class="slide fade">
+        
+        
+       
+
+    
+    </div>
+<!-- 버튼을 통한 페이지 이동 -->
+<div style="text-align: center;">
+    <button type="button" class="button" onclick="location.href='aa2.html'">
+        <h1 class="video-title">1.Camera </h1>
+        <img src="2.jpeg" width="350" height="300">
+        <p class="tag">온몸으로 잉크처럼 짙게 번지어,하나의 필름에 묻어난다.</p>
+      <p class="text_column">
+    </button>
+    <button type="button" class="button" onclick="location.href='aa3.html'">
+        <h1 class="video-title">2.phone </h1>
+        <img src="5.jpeg" width="350" height="300">
+        <p class="tag"> 의미가 없는 것들은 쉽게 잊혀지고 삭제된다.</p>
+      <p class="text_column">
+    </button>
+    <button type="button" class="button" onclick="location.href='aa4.html'">
+        <h1 class="video-title">3.Glow talker </h1>
+        <img src="6.jpeg" width="350" height="300">
+        <p class="tag">대부분 백치미를 보면 자신의 지식을 가르치려 한다.</p>
+      <p class="text_column">
+    </button>
+</div>
+<div style="text-align: center;">
+    <button type="button" class="button" onclick="location.href='aa5.html'">
+        <h1 class="video-title">4.Dig up </h1>
+        <img src="33.jpeg" width="350" height="300">
+        <p class="tag">머리에 어항이 뒤집혀 쓰여 있다는 것을 알지 못한 채로</p>
+      
+    </button>
+    <button type="button" class="button" onclick="location.href='aa6.html'">
+        <h1 class="video-title">5.Frog Boy  </h1>
+        <img src="44.jpeg" width="350" height="300">
+        <p class="tag"> 꺼져가는 여름을 애처로이 붙잡는 소리 </p>
+      
+    </button>
+    <button type="button" class="button" onclick="location.href='aa1.html'">
+        <h1 class="video-title">6.Memory </h1>
+        <img src="111.jpeg" width="350" height="300">
+         <p class="tag">머플러는 목에 두를 수 없을만큼 길어졌다</p>
+    
+    </button>
+</div>
+<div style="text-align: center;">
+    <button type="button" class="button" onclick="location.href='aa7.html'">
+        <h1 class="video-title">7.Fractions </h1>
+        <img src="88.jpeg" width="350" height="300">
+        <p class="tag">뱀은 개를 추앙하게 만들어 함정에 빠뜨린다 </p>
+
+    </button>
+    <button type="button" class="button" onclick="location.href='aa8.html'">
+        <h1 class="video-title">8.Butterfly </h1>
+        <img src="99.jpeg" width="350" height="300">
+        <p class="tag">나비는 꽃의 희생에 고마움을 느끼지 않았고</p>
+      
+    </button>
+    <button type="button" class="button" onclick="location.href='aa.html'">
+        <h1 class="video-title">9.Charm </h1>
+        <img src="770.jpeg" width="350" height="300">
+         <p class="tag">상황에 따라 새로운 페르소나를 만든다</p>
+     
+    </button>
+    
+  </script>
+                      </style>
+
+</html>
