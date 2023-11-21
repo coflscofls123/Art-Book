@@ -1,105 +1,28 @@
-
 <!DOCTYPE html>
-<html>
-<head>
-  
-  <style>
-    @keyframes snowfall {
-      0% { transform: translateY(-100%); }
-      100% { transform: translateY(100vh); }
-    }
-
-    .snowflake {
-      position: fixed;
-      top: -10px;
-      left: 50%;
-      width: 10px;
-      height: 10px;
-      background-color: #ffffff;
-      border-radius: 50%;
-      animation: snowfall 10s linear infinite; /* Increased duration to 10s */
-    }
-  </style>
-  
-</head>
-<body>
-  <!-- Place this div before the closing </body> tag -->
-  <div class="snowfall-container"></div>
-
-  <script>
-    // Generate random snowflakes
-    function generateSnowflakes() {
-      const container = document.querySelector('.snowfall-container');
-
-      for (let i = 0; i < 50; i++) {
-        const snowflake = document.createElement('div');
-        snowflake.classList.add('snowflake');
-        snowflake.style.left = `${Math.random() * 100}%`;
-        snowflake.style.animationDuration = `${Math.random() * 6 + 5}s`; /* Increased duration range to 5-10s */
-        container.appendChild(snowflake);
-      }
-    }
-
-    // Call the function to generate snowflakes
-    generateSnowflakes();
-  </script>
-</body>
-</html>
-
-
-
-
-<!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".css">
-    <title>Docu ent</title>
-
-    <title>Welcome to My Website</title>
+    <title>로딩창</title>
     <style>
-        
-        body {
-            background-color: rgb(0, 0, 0);
-            color: white;
-            text-align: center;
-            font-size: 24px;
-            margin: 0;
-            padding: 0;
-        }
-
-        #navbar {
-            background-color: black;
-            padding: 10px;
+        /* 스타일링 로딩 창 */
+        .loading-container {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            z-index: 9999;
-        }
-
-        #navbar ul {
-            margin: 50;
-            padding: 50;
-            list-style-type: none;
+            width: 100vw;
+            height: 100vh;
+            background: #fff;
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
-        #navbar ul li {
-            margin: 0 10px;
-        }
-
-        #navbar ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        #logo {
-            display: none;
-            animation: fade-in 2s ease-in-out;
+        .loading-icon {
+            max-width: 100%;
+            max-height: 100%;
+            opacity: 0; /* 초기에 투명하게 설정 */
+            animation: fade-in 2s ease-in-out forwards; /* 나타나는 애니메이션 설정 */
         }
 
         @keyframes fade-in {
@@ -110,57 +33,88 @@
                 opacity: 1;
             }
         }
-  
-.button {
-  bottom: 40px; /* 화면 하단으로 10px 위치에 배치 */
-  right: 40px; /* 화면 오른쪽으로 10px 위치에 배치 */
-  padding: 10px 20px;
-  background-color: #000000; /* 검정색 배경색 */
-  color: #ffffff; /* 흰색 글자색 */
-  border-radius: 10px; /* 10px 모서리 */
-  text-align: center;
-  text-decoration: none;
-  transition: background-color 0.3s ease-in-out; /* 배경색 변화에 애니메이션 효과 추가 */
-}
 
-.button:hover {
-  background-color: #333333; /* 버튼에 호버(hover) 효과가 적용될 때의 배경색 */
-}
+        /* 메인 화면 스타일 (감춰진 화면) */
+        .main-container {
+            position: absolute;
+            top: 60%; /* 50%에서 60%로 변경하여 위치 조정 */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100vh;
+            text-align: center;
+        }
 
-.button:active {
-  background-color: #111111; /* 버튼을 클릭할 때의 배경색 */
-}
-</style>
+        /* 이미지 스타일 */
+        .bottom-image {
+            position: absolute;
+            bottom: 0;
+            top: 78%;
+            left: 70%;
+            transform: translateX(-50%);
+            width: 120px; /* 이미지 너비 조절 */
+            height: 130px; /* 이미지 높이 조절 */
+        }
+
+        /* 스타일링 버튼 */
+        .transparent-button {
+            position: absolute;
+            top: 50%; /* 수직 가운데 정렬 */
+            left: 50%; /* 수평 가운데 정렬 */
+            width: 300px; /* 버튼 너비 조절 */
+            height: 300px; /* 버튼 높이 조절 */
+            background: transparent; /* 배경을 투명으로 설정 */
+            border: none; /* 테두리 없음 */
+            opacity: 0.5; /* 초기에 투명도 조절 */
+            cursor: pointer;
+            transform: translate(-50%, -50%); /* 버튼을 가운데 정렬 */
+        }
+
+        .transparent-button:focus {
+            outline: none; /* 포커스 표시 제거 */
+        }
+
+        /* 가운데 정렬된 텍스트 스타일 */
+        .custom-text {
+            font-family: 'Courier New', Courier, monospace; /* 다른 폰트로 변경 */
+            font-size: 32px; /* 폰트 크기 변경 */
+            font-weight: bold; /* 볼드 스타일 적용 */
+            color: #fffdfc; /* 텍스트 색상 변경 */
+            text-align: center;
+            border: 1px solid #fff; /* 1px 흰색 테두리 추가 */
+            padding: 5px; /* 텍스트와 테두리 간격 추가 */
+        }
+
+        /* 추가된 텍스트 스타일 */
+        .additional-text {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 10px;
+            color: #fffdfc;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
-    <nav class="navber" style="position: fixed; top: 0; left: 0; right: 0;">
-        <!-- 내비게이션 바 내용 생략 -->
-        </nav>
-    <div id="navbar">
-      
+    <!-- 로딩 창 -->
+    <div class="loading-container">
+        <img class="loading-icon" src="wowo.gif" alt="로딩 중...">
     </div>
-    <div class="butterfly"></div>
-    <div style="text-align: center;color: black;" h3>Memory!</h3>
-    <div style="text-align: center;color: black;" h3>Memory!</h3>
-    <div style="text-align: center;color: white;" h3></h3>
-      <a href="3index.html"><button class="button">></button></a>
-</body>
-<p><h2>Art Memory </h2></p>
-    <div id="logo">
-        <img src="1.png" width="600" height="660"alt="이미지 2"> 
-        <div class="logo">
-        </div>
+
+    <!-- 메인 화면 (감춰진 화면) -->
+    <div class="main-container">
+        <!-- 여기에 메인 화면 컨텐츠 추가 -->
+        <p class="custom-text">Art Chrome</p>
+        <!-- 추가된 텍스트 -->
+        <p class="additional-text">환영합니다.실험적 디자안인을 담아낸 디지털 아트크롬입니다.</p>
+        <!-- 이미지 추가 -->
+        <img class="bottom-image" src="3030.png" alt="이미지" width="100" height="100">
+    </div>
+
+    <!-- 투명한 버튼 -->
+    <button class="transparent-button" onclick="window.location.href='3index.html'"></button>
 
     <script>
-        window.onload = function() {
-            document.getElementById('logo').style.display = 'block';
-        };
-
-        // 웹용 네비게이션 바 표시
-        if (window.innerWidth >= 768) {
-            document.getElementById('navbar').style.display = 'block';
-        }
+     
     </script>
 </body>
 </html>
