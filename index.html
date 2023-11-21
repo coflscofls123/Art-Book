@@ -37,7 +37,7 @@
         /* 메인 화면 스타일 (감춰진 화면) */
         .main-container {
             position: absolute;
-            top: 60%; /* 50%에서 60%로 변경하여 위치 조정 */
+            top: 80%; /* 60%에서 80%로 변경하여 위치 조정 */
             left: 50%;
             transform: translate(-50%, -50%);
             width: 100vw;
@@ -57,20 +57,21 @@
         }
 
         /* 스타일링 버튼 */
-        .transparent-button {
+        .custom-button {
             position: absolute;
-            top: 50%; /* 수직 가운데 정렬 */
-            left: 50%; /* 수평 가운데 정렬 */
-            width: 300px; /* 버튼 너비 조절 */
-            height: 300px; /* 버튼 높이 조절 */
+            top: 90%; /* 50%에서 90%로 변경하여 위치 조정 */
+            left: 50%;
+            width: 50px; /* 버튼 너비 조절 */
+            height: 50px; /* 버튼 높이 조절 */
             background: transparent; /* 배경을 투명으로 설정 */
-            border: none; /* 테두리 없음 */
-            opacity: 0.5; /* 초기에 투명도 조절 */
+            border: 1px solid #fff; /* 1px 흰색 테두리 추가 */
+            color: #fff;
+            font-size: 36px; /* 텍스트 크기 변경 */
             cursor: pointer;
             transform: translate(-50%, -50%); /* 버튼을 가운데 정렬 */
         }
 
-        .transparent-button:focus {
+        .custom-button:focus {
             outline: none; /* 포커스 표시 제거 */
         }
 
@@ -80,6 +81,7 @@
             font-size: 32px; /* 폰트 크기 변경 */
             font-weight: bold; /* 볼드 스타일 적용 */
             color: #fffdfc; /* 텍스트 색상 변경 */
+            
             text-align: center;
             border: 1px solid #fff; /* 1px 흰색 테두리 추가 */
             padding: 5px; /* 텍스트와 테두리 간격 추가 */
@@ -92,7 +94,14 @@
             color: #fffdfc;
             text-align: center;
         }
+
+        /* 스크롤 제거 */
+        body {
+            overflow: hidden;
+            margin: 0; /* body의 기본 마진 제거 */
+        }
     </style>
+
 </head>
 <body>
     <!-- 로딩 창 -->
@@ -107,11 +116,11 @@
         <!-- 추가된 텍스트 -->
         <p class="additional-text">환영합니다.실험적 디자안인을 담아낸 디지털 아트크롬입니다.</p>
         <!-- 이미지 추가 -->
-        <img class="bottom-image" src="3030.png" alt="이미지" width="100" height="100">
+      
     </div>
 
     <!-- 투명한 버튼 -->
-    <button class="transparent-button" onclick="window.location.href='3index.html'"></button>
+    <button class="custom-button" onclick="window.location.href='3index.html'">Art Chrome</button>
 
     <script>
      
