@@ -1,44 +1,3 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Document</title>
-    <style>
-   
-     
-
-  
-      .button {
-        bottom: 40px; /* 화면 하단으로 10px 위치에 배치 */
-        right: 40px; /* 화면 오른쪽으로 10px 위치에 배치 */
-        padding: 10px 20px;
-        background-color: #000000; /* 검정색 배경색 */
-        color: #ffffff; /* 흰색 글자색 */
-        border-radius: 10px; /* 10px 모서리 */
-        text-align: center;
-        text-decoration: none;
-        transition: background-color 0.3s ease-in-out; /* 배경색 변화에 애니메이션 효과 추가 */
-      }
-  
-      .button:hover {
-        background-color: #333333; /* 버튼에 호버(hover) 효과가 적용될 때의 배경색 */
-      }
-  
-      .button:active {
-        background-color: #111111; /* 버튼을 클릭할 때의 배경색 */
-      }
-    </style>
-</head>
-<body>  
-    <a href="3index.html"><button class="button">Back</button></a>
-    <nav class="navbar">
-       
-         </div>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,114 +27,84 @@
 
     .swiper {
       width: 100%;
-      height: 100%;
-      background: #000;
+      padding-top: 50px;
+      padding-bottom: 50px;
     }
 
     .swiper-slide {
-      font-size: 18px;
-      color: #fff;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      padding: 40px 60px;
-    }
-
-    .parallax-bg {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 130%;
-      height: 100%;
-      -webkit-background-size: cover;
-      background-size: cover;
       background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
     }
 
-    .swiper-slide .title {
-      font-size: 41px;
-      font-weight: 300;
+    .swiper-slide img {
+      display: block;
+      width: 100%;
     }
-
-    .swiper-slide .subtitle {
-      font-size: 21px;
-    }
-
-    .swiper-slide .text {
-      font-size: 14px;
-      max-width: 400px;
-      line-height: 1.3;
-    }
-
-    .navbar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      background-color: hwb(0 99% 0%);
-    }
-
-    .button {
-      padding: 10px 20px;
-      background-color: #b73333;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      font-size: 16px;
-      cursor: pointer;
-    }
+    
   </style>
 </head>
 
 <body>
-
-  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper">
-    
-    <div class="parallax-bg" style="
-    background-image: url(1!.jpeg);
-    filter: blur(70%);
-  "></div>
-
+  <div class="back">
+    <a target="_blank" href="#">
+        <img class="moon" src="iiii.jpeg" style="max-width:100%; height:100% auto;"alt="달덩이">
+    </a>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">6. Memory <h1></div>
-        <div class="subtitle" data-swiper-parallax="-200">머플러 </div>
-
-        <div class="text" data-swiper-parallax="-100">
-          <p>
-            <p>아이는 살아 숨 쉬는 동안에 </p>
-                <p> 담아낸 것들을  목에 감아 두르며 살아간다.</p>
-                      
-            <p>두고두고 차곡 추억들이 담긴 길게 짜여진 낡은 머플러를 위로 감싸고 풀었다가 결국 
-            빈틈없이 감아져 숨을 쉴 수 없게 되어 목과 숨통에 답답함이 밀려오기 시작한다.</p>
-              
-              <P>때로는 머플러의 무게가 무거워져 아이에게 버거움을 느끼게 하고,
-                  때로는 중심을 잃어 휘청거리기도 한다.</p>
-           
-            <p>이 추억들이 가벼워져 아이와 함께 그것들과 조금씩 가벼워져 상기되는 날
-            여름에 찾아 온 그 아이가 머플러를 넓게 풀어 그 안에 이야기들을 하나하나 읽기 시작한다.</p>
-         
-               그러고 길어진 머플러를 오래된 옷장에 곤히  예쁘게 접어 넣어놓는다.</p>
-            <p> 무거워져 추억되는 날 겨울에 찾아 본 머플러는 목에 두를 수 없을만큼 길어졌다.</P>
-               
-
-              <P>그 안에서도 빈틈없이 길어져 숨을 셀 수 없이 자라고 있었다.</p>
-          </p>
-         
-        </div>
+       <a target="_blank" href="aa1.html">
+        <img src="777.jpeg" width="350" height="300">
+        </a>
+      </div>
+      <div class="swiper-slide">
+       <a target="_blank" href="aa2.html">
+        <img src="2.jpeg" width="350" height="300">
+         </a>
+      </div>
+      
+      <div class="swiper-slide">
+        <a target="_blank" href="aa3.html">
+         <img src="5.jpeg" width="350" height="300">
+           </a>
       </div>
      
       <div class="swiper-slide">
-        <div class="title" data-swiper-parallax="-300">Memory </div>
-        <div class="subtitle" data-swiper-parallax="-200">머플러 </div>
-        <div class="text" data-swiper-parallax="-100">
-          <p>
-            <a target="_blank" href="3index.html">
-            <img src="1.jpeg" alt="이미지" width="100%">
-        </div>
+         <a target="_blank" href="aa4.html">
+        <img src="6.jpeg" width="350" height="300">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <img src="77.jpeg" width="350" height="300">
+      </div>
+        <a target="_blank" href="aa6.html">
+      <div class="swiper-slide">
+        <img src="44.jpeg" width="350" height="300">
+         </a>
+      </div>
+      
+      <div class="swiper-slide">
+          <a target="_blank" href="aa5.html">
+        <img src="33.jpeg" width="350" height="300">
+        </a>
+      </div>
+      
+      <div class="swiper-slide">
+        <a target="_blank" href="aa7.html">
+        <img src="88.jpeg" width="350" height="300">
+         </a>
+      </div>
+      <div class="swiper-slide">
+        <a target="_blank" href="aa8.html">
+        <img src="92.jpeg" width="350" height="300">
+            </a>
+      </div>
+      <div class="swiper-slide">
+        <img src="7777.jpeg" width="350" height="300">
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
     <div class="swiper-pagination"></div>
   </div>
 
@@ -185,18 +114,223 @@
   <!-- Initialize Swiper -->
   <script>
     var swiper = new Swiper(".mySwiper", {
-      speed: 600,
-      parallax: true,
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      },
       pagination: {
         el: ".swiper-pagination",
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
       },
     });
   </script>
 </body>
 
 </html>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 2000, // Set the delay between slides to 2 seconds (2000 milliseconds)
+    },
+  });
+</script>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>웹페이지 홈 화면</title>
+  <link rel="stylesheet" href="oo.css">
+  <style>
+
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 0 auto;
+      max-width: 700px;
+      height: auto;
+    }
+    .image {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+    }
+    .image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .title {
+      text-align: center;
+      padding: 20px;
+    }
+  
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    
+    
+    
+  </style>
+</head>
+<body>
+  <main>
+    <p style="text-align: center;"><h2></h2></p>
+  </main>
+  <div class="back">
+    <a target="_blank" href="www.html">
+        <img class="moon" src="rrrr.jpeg" style="max-width:100%; height:100% auto;"alt="달덩이">
+    </a>
+  <div style="text-align: center;">
+    
+  </div>
+  <div class="container">
+    <div class="image">
+      <img src="1.jpeg" alt="이미지 1">
+    </div>
+    <div class="image">
+      <img src="2.jpeg" alt="이미지 2">
+    </div>
+    <div class="image">
+      <img src="3.jpeg" alt="이미지 3">
+    </div>
+    <div class="image">
+      <img src="4.jpeg" alt="이미지 4">
+    </div>
+    <div class="back">
+      <a target="_blank" href="22.html">
+      <img class="moon" src="uuuu.jpeg" style="max-width:203%; height:100% auto;"alt="달덩이">
+      
+    </a>
+    </div>
+  </div>
+  <main>
+    <p style="text-align: center;"><h2></h2></p>
+  </main>
+  
+  <div style="text-align: center;">
+    
+  </div>
+  <nav class="navbar" style="position: fixed; top: 0; left: 0; right: 0;">
+    <div class="navbar__logo">
+      <i class="fab fa-accusoft"></i>
+      <a href="Art Book"></a>
+    </div>
+
+    <ul class="navbar__menu">
+      <li><a href="3index.html">Home</a></li>
+  
+      <li><a href="ww.html">New Art</a></li>
+      <li><a href="www.html">Therapy</a></li>
+      <li><a href="22.html">Book</a></li>
+    </ul>
+   
+      
+  </nav>
+  
+  <div class="container">
+    <div class="image">
+        <img src="6.jpeg" width="350" height="500" alt="이미지 1">
+    </div>
+    <div class="image">
+      <img src="10.jpeg" width="350" height="500" alt="이미지 2">
+    </div>
+    <div class="image">
+      <img src="8.jpeg" width="350" height="500" alt="이미지 3">
+    </div>
+    <div class="image">
+      <img src="9.jpeg" width="350" height="500" alt="이미지 4">
+    </div>
+  </div>
+
+  <p class="additional-text">file:///Users/hwangchaelin/Desktop/index%20.html</p>
+        <!-- 이미지 추가 -->
+</body>
+
+
+<script>
+  // Display the images one by one with a delay
+  const images = document.querySelectorAll('.image');
+  let currentIndex = 0;
+  
+  setInterval(() => {
+    images[currentIndex].style.animation = 'none';
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].style.animation = 'fade-in 2s ease-in-out forwards';
+  }, 3000);
+  
+</script>
+
+<nav class="navbar" style="position: fixed; top: 0; left: 0; right: 0;">
+  <div class="navbar__logo">
+    <i class="fab fa-accusoft"></i>
+    <a href="Art Book"></a>
+  </div>
+
+   
+ 
+</nav>
+<style>
+  /* 오디오 컨트롤 및 재생 버튼 스타일링 */
+  #myAudio {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .play-button {
+    color: red;
+    /* 아이콘 스타일링 */
+  }
+
+  .play-button.playing {
+    /* 재생 중인 상태의 아이콘 스타일링 */
+  }
+</style>
+
+
+
+
+
+  <div class="navbar__logo">
+    <i class="fab fa-accusoft"></i>
+    <a href="Art Book"></a>
+  </div>
+
+  
+ 
+</script>
+
+
+
+
